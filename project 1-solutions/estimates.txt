@@ -1,0 +1,25 @@
+Minimum RTO for a single AZ outage
+
+The RTO (Recovery Time Objective) for a single AZ in the project is going to be relatively low because multi AZ was deployed in the project
+so as to drastically reduce RTO. So the minimum RTO for a single AZ outage should be between 30mins to 1hour.
+
+
+
+Minimum RTO for a single region outage
+
+The RTO (Recovery Time Objective) for a single region is also expected to be verry minimal because multi regioning was a prerequisite for the project
+so as to curb RTO when it comes regions.So the minimum RTO for a single region outage should be an 1hour.
+
+
+
+Minimum RPO for a single AZ outage
+
+Using AWS point-in-time-recovery we can potentially reduce the RPO of this project.
+
+
+
+
+Minimum RPO for a single region outage
+
+With the help of the read replica database we created in the secondary region we can easilty fault over to a new region to reduce RPO. Although this takes 
+into consideration time taken to promote the read replica database and time taken to notice the faulty databse but in all it makes for a much less RPO.	
